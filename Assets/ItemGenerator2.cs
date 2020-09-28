@@ -23,7 +23,7 @@ public class ItemGenerator2 : MonoBehaviour
     {
             if (unitychan.transform.position.z > i)
             {
-                for (int k = i; k < i + 40; k += 20)
+                for (int k = i; k < i + 40; k += 15)
                 {
                     int ran = Random.Range(1, 10);
                     if (ran <= 2)
@@ -31,7 +31,7 @@ public class ItemGenerator2 : MonoBehaviour
                         for (float j = -1; j <= 1; j += 0.4f)
                         {
                             GameObject cone = Instantiate(Coneprefab);
-                        cone.transform.position = new Vector3(4 * j, cone.transform.position.y, k+20) ;
+                        cone.transform.position = new Vector3(4 * j, cone.transform.position.y, k+40) ;
                         }
                     }
                     else
@@ -39,7 +39,7 @@ public class ItemGenerator2 : MonoBehaviour
                         for(int j =-1; j<=1; j++)
                         {
                             int item = Random.Range(1, 11);
-                            int offsetZ = Random.Range(20, 40);
+                            int offsetZ = Random.Range(40, 49);
                             if (1 <= item && item <= 6)
                             {
                                 GameObject coin = Instantiate(Coinprefab);
